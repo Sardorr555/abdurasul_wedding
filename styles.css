@@ -1,0 +1,445 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Scheherazade New', 'Arial', serif;
+    line-height: 1.8;
+    color: #2c1810;
+    background: linear-gradient(135deg, #f4e5d3 0%, #e8d5c4 50%, #d4b896 100%);
+    min-height: 100vh;
+    padding: 10px;
+    background-attachment: fixed;
+}
+
+/* Main invitation container */
+.invitation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(145deg, #ffffff 0%, #fefbf7 100%);
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    border: 3px solid #d4af37;
+}
+
+/* Decorative border */
+.decorative-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.corner-ornament {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #d4af37 30%, transparent 30%);
+    background-size: 10px 10px;
+    opacity: 0.3;
+}
+
+.corner-ornament.top-left {
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(45deg, #d4af37 50%, transparent 50%);
+}
+
+.corner-ornament.top-right {
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(-45deg, #d4af37 50%, transparent 50%);
+}
+
+.corner-ornament.bottom-left {
+    bottom: 10px;
+    left: 10px;
+    background: linear-gradient(-45deg, #d4af37 50%, transparent 50%);
+}
+
+.corner-ornament.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, #d4af37 50%, transparent 50%);
+}
+
+/* Main content */
+.invitation-content {
+    padding: 40px 30px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Header styles */
+.invitation-header {
+    margin-bottom: 40px;
+}
+
+.bismillah {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    color: #8b4513;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #8b4513;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+.decorative-line {
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    margin: 0 auto;
+    position: relative;
+}
+
+.decorative-line::before,
+.decorative-line::after {
+    content: '♦';
+    position: absolute;
+    top: -8px;
+    color: #d4af37;
+    font-size: 1rem;
+}
+
+.decorative-line::before {
+    left: -15px;
+}
+
+.decorative-line::after {
+    right: -15px;
+}
+
+/* Main content styles */
+.invitation-main {
+    margin-bottom: 40px;
+}
+
+.greeting {
+    margin-bottom: 30px;
+}
+
+.salaam {
+    font-size: 1.3rem;
+    color: #8b4513;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.invitation-text {
+    margin-bottom: 30px;
+    line-height: 2;
+}
+
+.invitation-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #2c1810;
+}
+
+.groom-name {
+    color: #8b4513;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* Date and time styles */
+.date-time {
+    margin: 30px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f5f0 0%, #ede4d3 100%);
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.date-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #8b4513;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.date-month,
+.date-year {
+    font-size: 1.2rem;
+    color: #8b4513;
+    font-weight: 600;
+}
+
+.time {
+    color: #d2691e;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+/* Family signature */
+.family-signature {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.family-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #8b4513;
+    margin-top: 10px;
+}
+
+/* Address section */
+.address-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #faf7f2 0%, #f0ebe0 100%);
+    border-radius: 15px;
+    border-left: 4px solid #d4af37;
+}
+
+.address-section h3 {
+    color: #8b4513;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.address,
+.landmark {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #2c1810;
+}
+
+/* Footer styles */
+.invitation-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.decorative-element {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.blessing {
+    font-size: 1.1rem;
+    color: #8b4513;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Floating hearts animation */
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff69b4;
+    transform: rotate(45deg);
+    opacity: 0.3;
+    animation: float 8s infinite linear;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #ff69b4;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -5px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -5px;
+}
+
+.heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.heart:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+    animation-duration: 10s;
+}
+
+.heart:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+    animation-duration: 6s;
+}
+
+.heart:nth-child(4) {
+    left: 70%;
+    animation-delay: 6s;
+    animation-duration: 9s;
+}
+
+.heart:nth-child(5) {
+    left: 90%;
+    animation-delay: 1s;
+    animation-duration: 7s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(45deg) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+        transform: translateY(90vh) rotate(45deg) scale(1);
+    }
+    90% {
+        opacity: 0.3;
+        transform: translateY(10vh) rotate(45deg) scale(1);
+    }
+    100% {
+        transform: translateY(-10vh) rotate(45deg) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+    
+    .invitation-container {
+        border-radius: 15px;
+    }
+    
+    .invitation-content {
+        padding: 25px 20px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .date-number {
+        font-size: 2.5rem;
+    }
+    
+    .bismillah {
+        font-size: 1rem;
+    }
+    
+    .corner-ornament {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .invitation-content {
+        padding: 20px 15px;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .date-number {
+        font-size: 2rem;
+    }
+    
+    .date {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .salaam {
+        font-size: 1.1rem;
+    }
+    
+    .invitation-text p {
+        font-size: 1rem;
+    }
+    
+    .corner-ornament {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .invitation-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .decorative-element {
+        width: 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .invitation-content {
+        padding: 15px 10px;
+    }
+    
+    .main-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .date-time {
+        padding: 15px;
+    }
+    
+    .address-section {
+        padding: 15px;
+    }
+}
